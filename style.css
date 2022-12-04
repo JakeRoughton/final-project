@@ -1,0 +1,59 @@
+@media screen and (max-width: 576px) {
+	#body{
+		 background-color: lightgrey;
+	}  
+}
+ 
+@media screen and (max-width: 992px) {
+	.container {
+	  background-color: lightslategray;
+	}
+}
+
+#carouselImg {
+	height: 480px;
+}
+
+.carouselText{
+	color: black;
+}
+
+#astroText1 {
+	font-size: 16px;
+	font-weight: bolder;
+	color: black;
+}
+
+#astroText2 {
+	font-size: 16px;
+	font-weight: bolder;
+	color: black;
+}
+
+#temp {
+	font-size: 16px;
+	font-weight: bolder;
+	color: black;
+	display: flex;
+	justify-content: flex-start;
+}
+
+#wind {
+	font-size: 16px;
+	font-weight: bolder;
+	color: black;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.card-text { height: 150px; overflow-y: scroll; width: 100%; }
+    
+.card-text p { width: 650px; word-break: break-word; }
+
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  margin-bottom: 240px;
+  width: 5vw;
+  height: 4vw;
+}
