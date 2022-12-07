@@ -100,10 +100,19 @@ let nasaRequest = async () => {
 	let response = await fetch ('https://images-api.nasa.gov/search?q=space&media_type=image');
 	let nasaData = await response.json();
 	console.log(nasaData);
-	nasaButton.addEventListener('click', () => {
-		for(i=0;i<100;i++);
-		nasaPics = nasaData.collection.items[i].links
-		cardBody.appendChild()
+	nasaButton.addEventListener('click', () => { 
+		createImages(nasaData,2);
+		//nasaPics = nasaData.collection.items[i].links
+		//cardBody.appendChild()
 	})
 }
 nasaRequest();
+
+function createImages(nasaData, n){
+
+	for(let i=0;i<n;i++) {
+		let newImg = document.createElement("img");
+		newImg.src = nasaData.collection.items[i].links[0].href
+		cardBody.appendChild(newImg);
+	}
+}
