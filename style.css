@@ -14,8 +14,19 @@
 	height: 480px;
 }
 
-.carouselText{
+.carouselText {
 	color: black;
+}
+
+.carousel {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.spotify {
+	display: flex;
+ 	justify-content: flex-end;
+	align-items: flex-start;
 }
 
 #astroText1 {
