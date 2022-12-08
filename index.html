@@ -4,23 +4,19 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
    <title>Gunnarr's Learning App</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-   integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-   crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
    <link rel="stylesheet" href="style.css">
 </head>
 <body id='body'>
 
-
-	<div id='weather'>
-   </div>
-
+   <div class='container1'>
 
    <!--    Carousel for forecast and astronomy    -->
-   <div id="firstDiv" class="carousel" data-bs-ride="carousel" style="width: 52%">
+   <div id="carouselCard">
+   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -28,7 +24,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img id="carouselImg" src="images/weatherGirl.jpg" class="d-block w-100" alt="weatherPerson">
+          <img id="carouselImg" src="images/weatherGirl.jpg" class="d-block w-100" alt="weatherPerson" style="width: 400px;">
           <div class="carousel-caption d-none d-md-block">
             <h5 class="carouselText">Welcome to your personal forecast Gunnarr and Davynn</h5>
             <p class="carouselText">Here's today's weather with sun and moon activity</p>
@@ -38,7 +34,7 @@
           <img id="carouselImg" src="images/todaysForecast.jpg" class="d-block w-100" alt="today">
           <div id="currentWeatherText" class="carousel-caption d-none d-md-block">
             <p id='temp' class='forecastText1'></p>
-            <p id='wind'class='forecastText2'> </p>
+            <p id='wind'class='forecastText2'></p>
           </div>
         </div>
         <div class="carousel-item">
@@ -50,6 +46,7 @@
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
@@ -57,41 +54,45 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-
-    <!--     NASA card     -->
-
-    <div class="card text-white bg-dark mb-3" style="width: 48%;">
-      <div class="card-header"></div>
-      <img id='nasaPics' class="card-img-top" alt="NASA pics">
-      <div class="card-body">
-        <h5 class="card-title">NASA Space Pictures</h5>
-        <button id="nasaButton" >Click Button for pictures</button>
-      </div>
     </div>
 
-
-   <!--     Card for Astronomy -->
-
-   <div id='astronomyDiv' style='height: 420px'; style='width: 52%'>
-      <div id="space" class="card text-white bg-secondary mb-3" style="width: 690px;">
-         <img src="https://go-apod.herokuapp.com/image" class="card-img-top" alt="randomSpaceImage">
-         <div class="card-body">
-           <h5 class="card-title">Daily space picture</h5>
-           <p id='spaceText' class="card-text"></p>
-         </div>
-       </div>
-       <div id="firstDiv" class="spotify card">
-        <iframe id='spotify' style="border-radius:12px" src="https://open.spotify.com/embed/artist/3XuDZrvJBvhTEGb8uXubgN?utm_source=generator" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-     </div>
+    <!--     NASA card     -->
+    <div id='nasaCard'>
+    <div class="card text-white bg-dark mb-3">
+      <img src="spaceImages/Pic1.jpg" id='getImage'>
+      <div class="card-body" style="height: 150px;">
+        <button id='nasaButton' type="button" class="btn btn-secondary">Click here to see in space</button>
+        <p id="nasaText">Orion Spacecraft with rockets rollout at Kennedy Space Center for the Artemis moon mission</p>
+      </div>
+    </div>
+    </div>
    </div>
 
+   <div class='container2'>
+    <!--     Davynn's Card     -->
+    <div id='davynnCard'>
+    <div class="card text-white bg-success mb-3">
+      <img src="davynnImages/Pic1.png" id='davynnImage' style="height: 400px;">
+      <div class="card-body">
+        <button id='davynnButton' type="button" class="btn btn-light">Different Shapes</button>
+      <h5 id='davynnText'>This is a circle</h5>
+      </div>
+    </div>
+    </div>
 
-
-
+   <!--     APOD Pic of the Day Card     -->
+   <div id='apodCard'>
+      <div id="space" class="card text-white bg-secondary mb-3">
+         <img src="https://go-apod.herokuapp.com/image" class="card-img-top" alt="randomSpaceImage" style="height: 420px;">
+         <h5 class="card-title">Daily space picture</h5>
+         <div class="card-body">
+           <p id='spaceText' class="card-text"></p>
+         </div>
+         <iframe id='spotify' style="border-radius:12px" src="https://open.spotify.com/embed/artist/3XuDZrvJBvhTEGb8uXubgN?utm_source=generator" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+   </div>
    
-               <!-- SPOTIFY CHRISTMAS PLAYLIST-->
-
+   </div>
    <script src="main.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>

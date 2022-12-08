@@ -18,6 +18,42 @@
 	color: black;
 }
 
+.container1{
+	display: flex;
+
+}
+
+.container2{
+	display: flex;
+}
+
+#carouselCard{
+	display: flex;
+	align-items: flex-start;
+}
+
+#nasaCard{
+	display: flex;
+	align-items: flex-end;
+}
+#davynnCard{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+#apodCard{
+	display: flex;
+	align-items: flex-start;
+}
+
+#getImage{
+	height: 340px;
+}
+
+#spaceText {
+	color:black;
+}
+
 .carousel {
 	display: flex;
 	justify-content: flex-start;
