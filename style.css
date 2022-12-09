@@ -1,17 +1,13 @@
-@media screen and (max-width: 576px) {
-	#body{
-		 background-color: lightgrey;
-	}  
-}
- 
-@media screen and (max-width: 992px) {
-	.container {
-	  background-color: lightslategray;
-	}
+#carouselImg {
+	position: static;
 }
 
-#carouselImg {
-	height: 480px;
+#nasaImage{
+
+	max-width: 100%; 
+	/* min-height: 499px; */
+	max-height: 100%; 
+
 }
 
 .carouselText {
@@ -20,7 +16,7 @@
 
 .container1{
 	display: flex;
-
+	max-height: 600px;
 }
 
 .container2{
@@ -32,22 +28,36 @@
 	align-items: flex-start;
 }
 
+.nasaBody{
+justify-content: flex-end;
+object-fit:cover;
+
+}
+
 #nasaCard{
 	display: flex;
 	align-items: flex-end;
-}
-#davynnCard{
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-end;
-}
-#apodCard{
-	display: flex;
-	align-items: flex-start;
+	margin-bottom: 80px;
+	max-width: 600px;
+	position:relative
 }
 
-#getImage{
-	height: 340px;
+#davynnCard{
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 300px;
+	width: 50%;
+}
+
+#davynnImage{
+	height: 400px;
+}
+
+#apodCard{
+	display: flex;
+	align-items: flex-end;
+	max-width: 700px;
+	position: relative;
 }
 
 #spaceText {
@@ -93,10 +103,23 @@
 	justify-content: flex-start;
 }
 
-.card-text { height: 150px; overflow-y: scroll; width: 100%; }
+.card-text { 
+	height: 150px; 
+	overflow-y: scroll; 
+	width: 100%; }
     
-.card-text p { width: 650px; word-break: break-word; }
+.card-text p { 
+	width: 650px; 
+	word-break: break-word; }
 
+#nasaText {
+	overflow-y: scroll; 
+	width: 100%;
+}
+
+#nasaText p{
+	word-break: break-word;
+}
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {

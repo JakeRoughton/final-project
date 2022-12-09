@@ -1,7 +1,3 @@
-let banner = document.querySelector('#banner');
-let weather = document.querySelector('#weather');
-let astronomy = document.querySelector('#astronomy');
-let bookLibrary = document.querySelector('#bookLibrary');
 let currentWeather = document.querySelector('#currentWeather');
 let text = document.querySelector('#text');
 let temp = document.querySelector('#temp');
@@ -10,11 +6,10 @@ let astroImage = document.querySelector('#astroImage');
 let astroText1 = document.querySelector('#astroText1');
 let astroText2 = document.querySelector('#astroText2');
 let nasaButton = document.querySelector('#nasaButton');
-let cardBody = document.querySelector('.card-body');
-let getImage = document.querySelector('#getImage');
+let nasaImage = document.querySelector('#nasaImage');
 let nasaText = document.querySelector('#nasaText');
-let davynnImage = document.querySelector('#davynnImage');
 let davynnButton = document.querySelector('#davynnButton');
+let davynnImage = document.querySelector('#davynnImage');
 let davynnText = document.querySelector('#davynnText');
 
 
@@ -84,36 +79,36 @@ let forecastFetch = async () => {
 
 	nasaButton.addEventListener('click', () => {
 		console.log('click event')
-		console.log(getImage.src)
-		if(getImage.src ===`${window.location.origin}/spaceImages/Pic1.jpg`){
-			getImage.src = 'spaceImages/Pic2.jpg'
+		console.log(nasaImage.src)
+		if(nasaImage.src ===`${window.location.origin}/spaceImages/Pic1.jpg`){
+			nasaImage.src = 'spaceImages/Pic2.jpg'
 			nasaText.innerHTML = 'This image shows the Large Magellanic Cloud galaxy in infrared light as seen by ESA Herschel Space Observatory and NASA Spitzer Space Telescope'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic2.jpg`){
-			getImage.src = '/spaceImages/Pic3.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic2.jpg`){
+			nasaImage.src = '/spaceImages/Pic3.jpg'
 			nasaText.innerHTML = 'Saturn seen with the Hubble Telescope'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic3.jpg`){
-			getImage.src = '/spaceImages/Pic4.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic3.jpg`){
+			nasaImage.src = '/spaceImages/Pic4.jpg'
 			nasaText.innerHTML = 'James Web Space Telescope'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic4.jpg`){
-			getImage.src = '/spaceImages/Pic5.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic4.jpg`){
+			nasaImage.src = '/spaceImages/Pic5.jpg'
 			nasaText.innerHTML = 'What looks like a red butterfly in space is in reality a nursery for hundreds of baby stars, revealed in this infrared image from NASAs Spitzer Space Telescope'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic5.jpg`){
-			getImage.src = '/spaceImages/Pic6.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic5.jpg`){
+			nasaImage.src = '/spaceImages/Pic6.jpg'
 			nasaText.innerHTML = 'ESA Herschel Space Observatory found oxygen molecules in a dense patch of gas and dust adjacent to star-forming regions in the Orion nebula.'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic6.jpg`){
-			getImage.src = '/spaceImages/Pic7.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic6.jpg`){
+			nasaImage.src = '/spaceImages/Pic7.jpg'
 			nasaText.innerHTML = 'Zinnia seeds grown in the Veggie plant growth system on the International Space Station'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic7.jpg`){
-			getImage.src = '/spaceImages/Pic8.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic7.jpg`){
+			nasaImage.src = '/spaceImages/Pic8.jpg'
 			nasaText.innerHTML = 'The Dumbbell nebula, also known as Messier 27, pumps out infrared light in this image from NASA Spitzer Space Telescope'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic8.jpg`){
-			getImage.src = '/spaceImages/Pic9.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic8.jpg`){
+			nasaImage.src = '/spaceImages/Pic9.jpg'
 			nasaText.innerHTML = 'This planetary nebulas simple, graceful appearance is thought to be due to perspective: our view from Earth looking straight into what is actually a barrel-shaped cloud'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic9.jpg`){
-			getImage.src = '/spaceImages/Pic10.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic9.jpg`){
+			nasaImage.src = '/spaceImages/Pic10.jpg'
 			nasaText.innerHTML = 'James Webb Space Telescope with the furthest picture in space ever taken. With a visible Einstein ring'
-		}else if(getImage.src === `${window.location.origin}/spaceImages/Pic10.jpg`){
-			getImage.src = '/spaceImages/Pic1.jpg'
+		}else if(nasaImage.src === `${window.location.origin}/spaceImages/Pic10.jpg`){
+			nasaImage.src = '/spaceImages/Pic1.jpg'
 			nasaText.innerHTML = 'Orion Spacecraft with rockets rollout at Kennedy Space Center for the Artemis moon mission'
 		}
 	})
@@ -147,7 +142,7 @@ let forecastFetch = async () => {
 			davynnText.innerHTML = 'This is a star'
 		}else if(davynnImage.src === `${window.location.origin}/davynnImages/Pic8.png`){
 			davynnImage.src = 'davynnImages/Pic1.png'
-			davynnText.innerHTML = 'This is a square'
+			davynnText.innerHTML = 'This is a circle'
 		}
 	})
 
@@ -163,15 +158,6 @@ let forecastFetch = async () => {
 	// 	})
 	// }
 	// nasaRequest();
-	
-	// function createImages(nasaData, n){
-	
-	// 	for(let i=0;i<n;i++) {
-	// 		let newImg = document.createElement("img");
-	// 		newImg.src = nasaData.collection.items[i].links[0].href
-	// 		cardBody.appendChild(newImg);
-	// 	}
-	// }
 
 
 	//     Google Books Fetch     //

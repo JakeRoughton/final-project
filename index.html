@@ -6,9 +6,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-   <title>Gunnarr's Learning App</title>
+   <title>Gunnarr & Davynn's Learning App</title>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
    <link rel="stylesheet" href="style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body id='body'>
 
@@ -24,7 +25,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img id="carouselImg" src="images/weatherGirl.jpg" class="d-block w-100" alt="weatherPerson" style="width: 400px;">
+          <img id="carouselImg" src="images/weatherGirl.jpg" class="d-block w-100" alt="weatherPerson">
           <div class="carousel-caption d-none d-md-block">
             <h5 class="carouselText">Welcome to your personal forecast Gunnarr and Davynn</h5>
             <p class="carouselText">Here's today's weather with sun and moon activity</p>
@@ -46,12 +47,12 @@
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
       </button>
     </div>
     </div>
@@ -59,8 +60,8 @@
     <!--     NASA card     -->
     <div id='nasaCard'>
     <div class="card text-white bg-dark mb-3">
-      <img src="spaceImages/Pic1.jpg" id='getImage'>
-      <div class="card-body" style="height: 150px;">
+      <img src="spaceImages/Pic1.jpg" id='nasaImage'>
+      <div class="nasaBody" >
         <button id='nasaButton' type="button" class="btn btn-secondary">Click here to see in space</button>
         <p id="nasaText">Orion Spacecraft with rockets rollout at Kennedy Space Center for the Artemis moon mission</p>
       </div>
@@ -69,10 +70,11 @@
    </div>
 
    <div class='container2'>
+
     <!--     Davynn's Card     -->
     <div id='davynnCard'>
     <div class="card text-white bg-success mb-3">
-      <img src="davynnImages/Pic1.png" id='davynnImage' style="height: 400px;">
+      <img src="davynnImages/Pic1.png" id='davynnImage'>
       <div class="card-body">
         <button id='davynnButton' type="button" class="btn btn-light">Different Shapes</button>
       <h5 id='davynnText'>This is a circle</h5>
@@ -83,7 +85,7 @@
    <!--     APOD Pic of the Day Card     -->
    <div id='apodCard'>
       <div id="space" class="card text-white bg-secondary mb-3">
-         <img src="https://go-apod.herokuapp.com/image" class="card-img-top" alt="randomSpaceImage" style="height: 420px;">
+         <img id='apodImage' src="https://go-apod.herokuapp.com/image" class="card-img-top" alt="randomSpaceImage" style="height: 420px;">
          <h5 class="card-title">Daily space picture</h5>
          <div class="card-body">
            <p id='spaceText' class="card-text"></p>
