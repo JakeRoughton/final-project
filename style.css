@@ -5,8 +5,8 @@
 #nasaImage{
 
 	max-width: 100%; 
-	/* min-height: 499px; */
-	max-height: 100%; 
+	min-height: 499px;
+	max-height: 500px; 
 
 }
 
